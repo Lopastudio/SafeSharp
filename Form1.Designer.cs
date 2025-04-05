@@ -1,6 +1,6 @@
 ﻿namespace SafeSharp
 {
-    partial class Form1
+    partial class SafeSharp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SafeSharp));
             this.Title_Label = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutSafeSharpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutMeeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GenPass_Button = new System.Windows.Forms.Button();
-            this.passwordLengthField = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.WebsiteBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.GenPass_Box = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.AddToDB_Button = new System.Windows.Forms.Button();
-            this.Username = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeDBPassphraseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.createDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeDBPassphraseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yamlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,43 +47,55 @@
             this.jsonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.yamlToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sQLite3ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.contextMenuStrip2.SuspendLayout();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.printPasswordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutSafeSharpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutMeeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GenPass_Button = new System.Windows.Forms.Button();
+            this.passwordLengthField = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Website_textbox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.GenPass_Box = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AddToDB_Button = new System.Windows.Forms.Button();
+            this.Username_textbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Website = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditBtn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordLengthField)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Title_Label
             // 
             this.Title_Label.AutoSize = true;
-            this.Title_Label.Font = new System.Drawing.Font("Stencil", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title_Label.Location = new System.Drawing.Point(18, 29);
+            this.Title_Label.Font = new System.Drawing.Font("Stencil", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title_Label.Location = new System.Drawing.Point(2, 39);
             this.Title_Label.Name = "Title_Label";
-            this.Title_Label.Size = new System.Drawing.Size(424, 76);
+            this.Title_Label.Size = new System.Drawing.Size(321, 57);
             this.Title_Label.TabIndex = 0;
             this.Title_Label.Text = "SafeSharp!";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(108, 26);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
             // 
             // menuStrip1
             // 
@@ -110,13 +103,173 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
+            this.settingsToolStripMenuItem,
             this.aboutToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(954, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1205, 29);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeDBPassphraseToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.createDBToolStripMenuItem,
+            this.loadDBToolStripMenuItem,
+            this.saveDBToolStripMenuItem,
+            this.saveAsDBToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.importToolStripMenuItem,
+            this.exportToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.printPasswordsToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // changeDBPassphraseToolStripMenuItem
+            // 
+            this.changeDBPassphraseToolStripMenuItem.Name = "changeDBPassphraseToolStripMenuItem";
+            this.changeDBPassphraseToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.changeDBPassphraseToolStripMenuItem.Text = "Change DB passphrase";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(191, 6);
+            // 
+            // createDBToolStripMenuItem
+            // 
+            this.createDBToolStripMenuItem.Name = "createDBToolStripMenuItem";
+            this.createDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.createDBToolStripMenuItem.Text = "Create DB";
+            // 
+            // loadDBToolStripMenuItem
+            // 
+            this.loadDBToolStripMenuItem.Name = "loadDBToolStripMenuItem";
+            this.loadDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.loadDBToolStripMenuItem.Text = "Load DB";
+            // 
+            // saveDBToolStripMenuItem
+            // 
+            this.saveDBToolStripMenuItem.Name = "saveDBToolStripMenuItem";
+            this.saveDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.saveDBToolStripMenuItem.Text = "Save DB";
+            // 
+            // saveAsDBToolStripMenuItem
+            // 
+            this.saveAsDBToolStripMenuItem.Name = "saveAsDBToolStripMenuItem";
+            this.saveAsDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.saveAsDBToolStripMenuItem.Text = "Save DB As";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(191, 6);
+            // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jsonToolStripMenuItem,
+            this.yamlToolStripMenuItem,
+            this.sqlite3ToolStripMenuItem});
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.importToolStripMenuItem.Text = "Import";
+            // 
+            // jsonToolStripMenuItem
+            // 
+            this.jsonToolStripMenuItem.Name = "jsonToolStripMenuItem";
+            this.jsonToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.jsonToolStripMenuItem.Text = "Json";
+            // 
+            // yamlToolStripMenuItem
+            // 
+            this.yamlToolStripMenuItem.Name = "yamlToolStripMenuItem";
+            this.yamlToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.yamlToolStripMenuItem.Text = "Yaml";
+            // 
+            // sqlite3ToolStripMenuItem
+            // 
+            this.sqlite3ToolStripMenuItem.Name = "sqlite3ToolStripMenuItem";
+            this.sqlite3ToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.sqlite3ToolStripMenuItem.Text = "SQLite3";
+            // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jsonToolStripMenuItem1,
+            this.yamlToolStripMenuItem1,
+            this.sQLite3ToolStripMenuItem1});
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            // 
+            // jsonToolStripMenuItem1
+            // 
+            this.jsonToolStripMenuItem1.Name = "jsonToolStripMenuItem1";
+            this.jsonToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
+            this.jsonToolStripMenuItem1.Text = "Json";
+            // 
+            // yamlToolStripMenuItem1
+            // 
+            this.yamlToolStripMenuItem1.Name = "yamlToolStripMenuItem1";
+            this.yamlToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
+            this.yamlToolStripMenuItem1.Text = "Yaml";
+            // 
+            // sQLite3ToolStripMenuItem1
+            // 
+            this.sQLite3ToolStripMenuItem1.Name = "sQLite3ToolStripMenuItem1";
+            this.sQLite3ToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
+            this.sQLite3ToolStripMenuItem1.Text = "SQLite3";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(191, 6);
+            // 
+            // printPasswordsToolStripMenuItem
+            // 
+            this.printPasswordsToolStripMenuItem.Name = "printPasswordsToolStripMenuItem";
+            this.printPasswordsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.printPasswordsToolStripMenuItem.Text = "Print Passwords";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editPasswordToolStripMenuItem,
+            this.removePasswordToolStripMenuItem,
+            this.toolStripSeparator3});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 19);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // editPasswordToolStripMenuItem
+            // 
+            this.editPasswordToolStripMenuItem.Name = "editPasswordToolStripMenuItem";
+            this.editPasswordToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.editPasswordToolStripMenuItem.Text = "Edit password";
+            // 
+            // removePasswordToolStripMenuItem
+            // 
+            this.removePasswordToolStripMenuItem.Name = "removePasswordToolStripMenuItem";
+            this.removePasswordToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.removePasswordToolStripMenuItem.Text = "Remove password";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(167, 6);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 19);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem1
             // 
@@ -130,15 +283,16 @@
             // aboutSafeSharpToolStripMenuItem
             // 
             this.aboutSafeSharpToolStripMenuItem.Name = "aboutSafeSharpToolStripMenuItem";
-            this.aboutSafeSharpToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.aboutSafeSharpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutSafeSharpToolStripMenuItem.Text = "About SafeSharp";
             this.aboutSafeSharpToolStripMenuItem.Click += new System.EventHandler(this.aboutSafeSharpToolStripMenuItem_Click);
             // 
             // aboutMeeeToolStripMenuItem
             // 
             this.aboutMeeeToolStripMenuItem.Name = "aboutMeeeToolStripMenuItem";
-            this.aboutMeeeToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.aboutMeeeToolStripMenuItem.Text = "About meee";
+            this.aboutMeeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutMeeeToolStripMenuItem.Text = "GitHub";
+            this.aboutMeeeToolStripMenuItem.Click += new System.EventHandler(this.aboutMeeeToolStripMenuItem_Click);
             // 
             // GenPass_Button
             // 
@@ -180,12 +334,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.WebsiteBox);
+            this.groupBox1.Controls.Add(this.Website_textbox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.GenPass_Box);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.AddToDB_Button);
-            this.groupBox1.Controls.Add(this.Username);
+            this.groupBox1.Controls.Add(this.Username_textbox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.passwordLengthField);
             this.groupBox1.Controls.Add(this.label1);
@@ -197,12 +351,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Password Generator";
             // 
-            // WebsiteBox
+            // Website_textbox
             // 
-            this.WebsiteBox.Location = new System.Drawing.Point(150, 87);
-            this.WebsiteBox.Name = "WebsiteBox";
-            this.WebsiteBox.Size = new System.Drawing.Size(223, 44);
-            this.WebsiteBox.TabIndex = 13;
+            this.Website_textbox.Location = new System.Drawing.Point(150, 87);
+            this.Website_textbox.Name = "Website_textbox";
+            this.Website_textbox.Size = new System.Drawing.Size(223, 44);
+            this.Website_textbox.TabIndex = 13;
             // 
             // label4
             // 
@@ -246,12 +400,12 @@
             this.AddToDB_Button.UseVisualStyleBackColor = true;
             this.AddToDB_Button.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Username
+            // Username_textbox
             // 
-            this.Username.Location = new System.Drawing.Point(150, 37);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(223, 44);
-            this.Username.TabIndex = 8;
+            this.Username_textbox.Location = new System.Drawing.Point(150, 37);
+            this.Username_textbox.Name = "Username_textbox";
+            this.Username_textbox.Size = new System.Drawing.Size(223, 44);
+            this.Username_textbox.TabIndex = 8;
             // 
             // label2
             // 
@@ -263,17 +417,6 @@
             this.label2.Text = "App / Website:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SafeSharp.Properties.Resources.ukraine_flag;
-            this.pictureBox1.Location = new System.Drawing.Point(919, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 14);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -281,173 +424,120 @@
             this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Font = new System.Drawing.Font("Magneto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(777, 9);
+            this.label5.Location = new System.Drawing.Point(1028, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "I stand with Ukraine!";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // listBox1
+            // dataGridView1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 36;
-            this.listBox1.Items.AddRange(new object[] {
-            "www.example.com - SecuRePass#1Word"});
-            this.listBox1.Location = new System.Drawing.Point(628, 68);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(314, 436);
-            this.listBox1.TabIndex = 10;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.Website,
+            this.Username,
+            this.Password,
+            this.EditBtn});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.Location = new System.Drawing.Point(420, 39);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.Size = new System.Drawing.Size(773, 465);
+            this.dataGridView1.TabIndex = 12;
             // 
-            // editToolStripMenuItem
+            // Date
             // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editPasswordToolStripMenuItem,
-            this.removePasswordToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 19);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.Date.HeaderText = "Date created";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             // 
-            // fileToolStripMenuItem
+            // Website
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadDBToolStripMenuItem,
-            this.saveDBToolStripMenuItem,
-            this.saveAsDBToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.importToolStripMenuItem,
-            this.exportToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.changeDBPassphraseToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
-            this.fileToolStripMenuItem.Text = "File";
+            this.Website.HeaderText = "Website";
+            this.Website.Name = "Website";
+            this.Website.ReadOnly = true;
             // 
-            // editPasswordToolStripMenuItem
+            // Username
             // 
-            this.editPasswordToolStripMenuItem.Name = "editPasswordToolStripMenuItem";
-            this.editPasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editPasswordToolStripMenuItem.Text = "Edit password";
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
             // 
-            // removePasswordToolStripMenuItem
+            // Password
             // 
-            this.removePasswordToolStripMenuItem.Name = "removePasswordToolStripMenuItem";
-            this.removePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.removePasswordToolStripMenuItem.Text = "Remove password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
             // 
-            // loadDBToolStripMenuItem
+            // EditBtn
             // 
-            this.loadDBToolStripMenuItem.Name = "loadDBToolStripMenuItem";
-            this.loadDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.loadDBToolStripMenuItem.Text = "Load DB";
+            this.EditBtn.HeaderText = "Edit";
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.ReadOnly = true;
             // 
-            // saveDBToolStripMenuItem
+            // openFileDialog1
             // 
-            this.saveDBToolStripMenuItem.Name = "saveDBToolStripMenuItem";
-            this.saveDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.saveDBToolStripMenuItem.Text = "Save DB";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // changeDBPassphraseToolStripMenuItem
+            // pictureBox2
             // 
-            this.changeDBPassphraseToolStripMenuItem.Name = "changeDBPassphraseToolStripMenuItem";
-            this.changeDBPassphraseToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.changeDBPassphraseToolStripMenuItem.Text = "Change DB passphrase";
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::SafeSharp.Properties.Resources.SafeSharp_transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(329, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(76, 71);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
-            // importToolStripMenuItem
+            // pictureBox1
             // 
-            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.jsonToolStripMenuItem,
-            this.yamlToolStripMenuItem,
-            this.sqlite3ToolStripMenuItem});
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.importToolStripMenuItem.Text = "Import";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::SafeSharp.Properties.Resources.ukraine_flag;
+            this.pictureBox1.Location = new System.Drawing.Point(1167, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 14);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
-            // jsonToolStripMenuItem
-            // 
-            this.jsonToolStripMenuItem.Name = "jsonToolStripMenuItem";
-            this.jsonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.jsonToolStripMenuItem.Text = "Json";
-            // 
-            // yamlToolStripMenuItem
-            // 
-            this.yamlToolStripMenuItem.Name = "yamlToolStripMenuItem";
-            this.yamlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.yamlToolStripMenuItem.Text = "Yaml";
-            // 
-            // sqlite3ToolStripMenuItem
-            // 
-            this.sqlite3ToolStripMenuItem.Name = "sqlite3ToolStripMenuItem";
-            this.sqlite3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sqlite3ToolStripMenuItem.Text = "SQLite3";
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.jsonToolStripMenuItem1,
-            this.yamlToolStripMenuItem1,
-            this.sQLite3ToolStripMenuItem1});
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.exportToolStripMenuItem.Text = "Export";
-            // 
-            // jsonToolStripMenuItem1
-            // 
-            this.jsonToolStripMenuItem1.Name = "jsonToolStripMenuItem1";
-            this.jsonToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.jsonToolStripMenuItem1.Text = "Json";
-            // 
-            // yamlToolStripMenuItem1
-            // 
-            this.yamlToolStripMenuItem1.Name = "yamlToolStripMenuItem1";
-            this.yamlToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.yamlToolStripMenuItem1.Text = "Yaml";
-            // 
-            // sQLite3ToolStripMenuItem1
-            // 
-            this.sQLite3ToolStripMenuItem1.Name = "sQLite3ToolStripMenuItem1";
-            this.sQLite3ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.sQLite3ToolStripMenuItem1.Text = "SQLite3";
-            // 
-            // saveAsDBToolStripMenuItem
-            // 
-            this.saveAsDBToolStripMenuItem.Name = "saveAsDBToolStripMenuItem";
-            this.saveAsDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.saveAsDBToolStripMenuItem.Text = "Save DB As";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(191, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(191, 6);
-            // 
-            // Form1
+            // SafeSharp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 516);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(1205, 513);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Title_Label);
             this.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 7, 3, 7);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "SafeSharp";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "SafeSharp";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.contextMenuStrip2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordLengthField)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -457,9 +547,6 @@
         #endregion
 
         private System.Windows.Forms.Label Title_Label;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutSafeSharpToolStripMenuItem;
@@ -469,15 +556,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Username;
+        private System.Windows.Forms.TextBox Username_textbox;
         private System.Windows.Forms.TextBox GenPass_Box;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button AddToDB_Button;
-        private System.Windows.Forms.TextBox WebsiteBox;
+        private System.Windows.Forms.TextBox Website_textbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveDBToolStripMenuItem;
@@ -496,6 +582,20 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createDBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Website;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewButtonColumn EditBtn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem printPasswordsToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }
 

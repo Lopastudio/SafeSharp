@@ -63,6 +63,26 @@ namespace SafeSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Demovic_Quite {
+            get {
+                object obj = ResourceManager.GetObject("Demovic_Quite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SafeSharp_transparent {
+            get {
+                object obj = ResourceManager.GetObject("SafeSharp_transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ukraine_flag {
             get {
                 object obj = ResourceManager.GetObject("ukraine_flag", resourceCulture);
