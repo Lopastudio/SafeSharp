@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace SafeSharp
 {
@@ -38,15 +39,30 @@ namespace SafeSharp
             MessageBox.Show("Version: " + version + "\nSafe place for all your passwords!", "About SafeSharp", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
 
+        private void LoadDatabaseIntoGrid()
+        {
+            dataGridView1.Rows.Clear();
+            var entries = DatabaseHelper.LoadPasswords();
+            foreach (var (date, website, username, password) in entries)
+            {
+                dataGridView1.Rows.Add(date, website, username, password, "Edit");
+            }
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Set the DataGridView to fill the form
+            DatabaseHelper.InitializeDatabase();
+
             dataGridView1.Columns["Date"].Width = 150;
             dataGridView1.Columns["Website"].Width = 200;
             dataGridView1.Columns["Username"].Width = 150;
             dataGridView1.Columns["Password"].Width = 150;
             dataGridView1.Columns["EditBtn"].Width = 60;
+
+            LoadDatabaseIntoGrid();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -66,6 +82,8 @@ namespace SafeSharp
 
             string date = DateTime.Now.ToString("dd-MM-yyyy");
             dataGridView1.Rows.Add(date, Website_textbox.Text, Username_textbox.Text, GenedPassword, "Edit");
+            DatabaseHelper.SavePassword(date, Website_textbox.Text, Username_textbox.Text, GenedPassword);
+
 
             // Clear input fields
             Website_textbox.Text = "";
@@ -90,6 +108,31 @@ namespace SafeSharp
         private void aboutMeeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Lopastudio/SafeSharp");
+        }
+
+        private void createDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveAsDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeDBPassphraseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

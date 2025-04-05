@@ -135,6 +135,7 @@
             this.changeDBPassphraseToolStripMenuItem.Name = "changeDBPassphraseToolStripMenuItem";
             this.changeDBPassphraseToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.changeDBPassphraseToolStripMenuItem.Text = "Change DB passphrase";
+            this.changeDBPassphraseToolStripMenuItem.Click += new System.EventHandler(this.changeDBPassphraseToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -146,24 +147,28 @@
             this.createDBToolStripMenuItem.Name = "createDBToolStripMenuItem";
             this.createDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.createDBToolStripMenuItem.Text = "Create DB";
+            this.createDBToolStripMenuItem.Click += new System.EventHandler(this.createDBToolStripMenuItem_Click);
             // 
             // loadDBToolStripMenuItem
             // 
             this.loadDBToolStripMenuItem.Name = "loadDBToolStripMenuItem";
             this.loadDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.loadDBToolStripMenuItem.Text = "Load DB";
+            this.loadDBToolStripMenuItem.Click += new System.EventHandler(this.loadDBToolStripMenuItem_Click);
             // 
             // saveDBToolStripMenuItem
             // 
             this.saveDBToolStripMenuItem.Name = "saveDBToolStripMenuItem";
             this.saveDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.saveDBToolStripMenuItem.Text = "Save DB";
+            this.saveDBToolStripMenuItem.Click += new System.EventHandler(this.saveDBToolStripMenuItem_Click);
             // 
             // saveAsDBToolStripMenuItem
             // 
             this.saveAsDBToolStripMenuItem.Name = "saveAsDBToolStripMenuItem";
             this.saveAsDBToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.saveAsDBToolStripMenuItem.Text = "Save DB As";
+            this.saveAsDBToolStripMenuItem.Click += new System.EventHandler(this.saveAsDBToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -250,19 +255,19 @@
             // editPasswordToolStripMenuItem
             // 
             this.editPasswordToolStripMenuItem.Name = "editPasswordToolStripMenuItem";
-            this.editPasswordToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.editPasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editPasswordToolStripMenuItem.Text = "Edit password";
             // 
             // removePasswordToolStripMenuItem
             // 
             this.removePasswordToolStripMenuItem.Name = "removePasswordToolStripMenuItem";
-            this.removePasswordToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.removePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.removePasswordToolStripMenuItem.Text = "Remove password";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(167, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // settingsToolStripMenuItem
             // 
