@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.IO;
+using Microsoft.Win32;
 
 namespace SafeSharp
 {
@@ -112,27 +114,45 @@ namespace SafeSharp
 
         private void createDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void loadDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Filter = "SQLite Database|*.db";
+            openDialog.Title = "Open Existing Database";
+            if (openDialog.ShowDialog() == DialogResult.OK)
+            {
+                File.Copy(openDialog.FileName, "safesharp.db", overwrite: true);
+                MessageBox.Show("Database loaded successfully.");
+                LoadDatabaseIntoGrid();
+            }
         }
 
         private void saveDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            string backupPath = $"backup_{DateTime.Now:yyyyMMdd_HHmmss}.db";
+            File.Copy("safesharp.db", backupPath, overwrite: true);
+            MessageBox.Show($"Database saved as {backupPath}");
         }
 
         private void saveAsDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "SQLite Database|*.db";
+            saveDialog.Title = "Save Database As";
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                File.Copy("safesharp.db", saveDialog.FileName, overwrite: true);
+                MessageBox.Show("Database saved to new location.");
+            }
         }
 
         private void changeDBPassphraseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Passphrase changing is not yet implemented.\nYou would need to re-encrypt each value with a new key.", "Not Implemented", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }

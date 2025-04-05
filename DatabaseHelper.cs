@@ -38,6 +38,8 @@ namespace SafeSharp
         // Save a password entry to the database
         public static void SavePassword(string date, string website, string username, string password)
         {
+            string encryptedPassword = EncryptionHelper.Encrypt(password);
+
             using (var conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
@@ -47,14 +49,13 @@ namespace SafeSharp
                     cmd.Parameters.AddWithValue("@date", date);
                     cmd.Parameters.AddWithValue("@website", website);
                     cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password); // You can encrypt here later
+                    cmd.Parameters.AddWithValue("@password", encryptedPassword);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        // Load all password entries from the database
-        public static List<(string Date, string Website, string Username, string Password)> LoadPasswords()
+        public static List<(string, string, string, string)> LoadPasswords()
         {
             var list = new List<(string, string, string, string)>();
             using (var conn = new SQLiteConnection(connectionString))
@@ -66,11 +67,21 @@ namespace SafeSharp
                 {
                     while (reader.Read())
                     {
+                        string decryptedPassword;
+                        try
+                        {
+                            decryptedPassword = EncryptionHelper.Decrypt(reader["Password"].ToString());
+                        }
+                        catch
+                        {
+                            decryptedPassword = "[Error: Cannot decrypt]";
+                        }
+
                         list.Add((
                             reader["Date"].ToString(),
                             reader["Website"].ToString(),
                             reader["Username"].ToString(),
-                            reader["Password"].ToString()
+                            decryptedPassword
                         ));
                     }
                 }
