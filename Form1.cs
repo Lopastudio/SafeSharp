@@ -43,5 +43,15 @@ namespace SafeSharp
             int length = Convert.ToInt32(passwordLengthField.Value);
             MessageBox.Show(generatePassword(length));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
