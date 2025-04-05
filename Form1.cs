@@ -18,6 +18,16 @@ namespace SafeSharp
             InitializeComponent();
         }
 
+        private string generatePassword(int length)
+        {
+            // Generate a random password
+            string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&\\'()*+,-./:;<=>?@[\\\\]^_`{|}~";
+            Random random = new Random();
+            string password = new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+            return password;
+        }
+
         private void aboutSafeSharpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Version: " + version + "\nSafe place for all your passwords!", "About SafeSharp", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -26,6 +36,12 @@ namespace SafeSharp
         private void Form1_Load(object sender, EventArgs e)
         {
             // may come handy
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int length = Convert.ToInt32(passwordLengthField.Value);
+            MessageBox.Show(generatePassword(length));
         }
     }
 }

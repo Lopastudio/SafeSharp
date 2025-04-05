@@ -37,16 +37,18 @@
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSafeSharpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutMeeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.passwordLengthField = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordLengthField)).BeginInit();
             this.SuspendLayout();
             // 
             // Title_Label
             // 
             this.Title_Label.AutoSize = true;
             this.Title_Label.Font = new System.Drawing.Font("Stencil", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title_Label.Location = new System.Drawing.Point(10, 28);
-            this.Title_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Title_Label.Location = new System.Drawing.Point(18, 29);
             this.Title_Label.Name = "Title_Label";
             this.Title_Label.Size = new System.Drawing.Size(250, 44);
             this.Title_Label.TabIndex = 0;
@@ -76,8 +78,8 @@
             this.aboutToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1113, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 5, 0, 5);
+            this.menuStrip1.Size = new System.Drawing.Size(954, 29);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -87,7 +89,7 @@
             this.aboutSafeSharpToolStripMenuItem,
             this.aboutMeeeToolStripMenuItem});
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(52, 19);
             this.aboutToolStripMenuItem1.Text = "About";
             // 
             // aboutSafeSharpToolStripMenuItem
@@ -103,22 +105,53 @@
             this.aboutMeeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutMeeeToolStripMenuItem.Text = "About meee";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(26, 141);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 34);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Generate password";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // passwordLengthField
+            // 
+            this.passwordLengthField.Location = new System.Drawing.Point(26, 185);
+            this.passwordLengthField.Maximum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.passwordLengthField.Name = "passwordLengthField";
+            this.passwordLengthField.Size = new System.Drawing.Size(172, 44);
+            this.passwordLengthField.TabIndex = 5;
+            this.passwordLengthField.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 625);
+            this.ClientSize = new System.Drawing.Size(954, 516);
+            this.Controls.Add(this.passwordLengthField);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Title_Label);
-            this.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 7, 3, 7);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordLengthField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,6 +167,8 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutSafeSharpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutMeeeToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown passwordLengthField;
     }
 }
 
