@@ -7,7 +7,7 @@ namespace SafeSharp
 {
     public static class DatabaseHelper
     {
-        private static string dbPath = "safesharp.db";
+        private static string dbPath = Properties.Settings.Default.DatabasePath;
         private static string connectionString = $"Data Source={dbPath};Version=3;";
 
         // Create the DB file and table if they don't exist
@@ -38,7 +38,7 @@ namespace SafeSharp
         // Save a password entry to the database
         public static void SavePassword(string date, string website, string username, string password)
         {
-            string encryptedPassword = EncryptionHelper.Encrypt(password);
+            string encryptedPassword = EncryptionHelper.Encrypt(password, Properties.Settings.Default.Passphrase);
 
             using (var conn = new SQLiteConnection(connectionString))
             {
@@ -70,7 +70,7 @@ namespace SafeSharp
                         string decryptedPassword;
                         try
                         {
-                            decryptedPassword = EncryptionHelper.Decrypt(reader["Password"].ToString());
+                            decryptedPassword = EncryptionHelper.Decrypt(reader["Password"].ToString(), Properties.Settings.Default.Passphrase);
                         }
                         catch
                         {
